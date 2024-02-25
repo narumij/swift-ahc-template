@@ -26,4 +26,11 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 
 ### 解決策
 
-つづく...
+Templateディレクトリのパッケージをお試しください。
+現在はAHC030用になっており、toolsディレクトリを配布のテスターで差し替える必要があります。
+
+スキームの修正も必要です。
+ビルドターゲットDebuggableのRunのOptionsを開いてください。
+OptionsのWorking Directoryにチェックを入れ、パッケージのルートフォルダを選択してください。
+
+準備ができたら、ビルドターゲットRunを実行し、実行ログとスコアがコンソールペインに表示されていればOKです。
