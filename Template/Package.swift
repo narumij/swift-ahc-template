@@ -17,13 +17,15 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "AtCoderHeuristic"),
-        .target(
-            name: "AtCoderHeuristicHelper"),
         .testTarget(
             name: "AtCoderHeuristicTests",
             dependencies: ["AtCoderHeuristic"]),
         .executableTarget(
-            name: "cmd",
+            name: "Executables",
+            dependencies: [ "AtCoderHeuristic" ]
+        ),
+        .executableTarget(
+            name: "Debuggable",
             dependencies: [ "AtCoderHeuristic" ]
         )
     ]
